@@ -419,6 +419,23 @@ window.addEventListener("click", (e) => {
     body.classList.remove("on");
   }
 });
+//////////// sec3 stack click ////////////
+const stackImg = document.querySelectorAll(".stack");
+const stackDetail = document.querySelectorAll(".stackDetail");
+
+stackImg.forEach((item, i) => {
+  item.addEventListener("click", () => {
+    stackImg.forEach((a) => {
+      a.classList.remove("on");
+    });
+    stackImg[i].classList.add("on");
+
+    stackDetail.forEach((b) => {
+      b.classList.remove("on");
+    });
+    stackDetail[i].classList.add("on");
+  });
+});
 
 //////////// sec5 yes 버튼 ////////////
 const pj = document.querySelectorAll(".pj");

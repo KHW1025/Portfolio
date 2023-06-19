@@ -191,9 +191,6 @@ canvas {
   display: flex;
   align-items: center;
 }
-#sec2 .secTitle {
-  /* margin-top: 30px; */
-}
 .secTitle .titleBar {
   background-color: #ffcf23;
   width: 6px;
@@ -1307,26 +1304,35 @@ canvas {
   filter: brightness(0.3);
 }
 .overViewCon {
-  margin-top: 80px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.overViewCon > span:first-of-type {
+.overViewCon > span:nth-of-type(1) {
   font-family: "SBAggroM";
   font-size: 32px;
 }
-.overViewCon > span:last-of-type {
+.overViewCon > span:nth-of-type(2) {
   font-size: 20px;
   margin-top: 10px;
   /* border: 1px solid red; */
   max-width: 80%;
   text-align: center;
   line-height: 1.5;
+}
+.overViewCon > span:nth-of-type(3) {
+  font-size: 20px;
+  margin-top: 10px;
+  /* border: 1px solid red; */
+  text-align: center;
   /* font-weight: bold; */
 }
+.overViewCon > span:nth-of-type(3) > i {
+  color: #ffcf23;
+}
 .pjStackCon {
-  margin: 80px auto 0;
+  margin: 100px auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1344,6 +1350,64 @@ canvas {
 .pjStackCon li i {
   color: #ffcf23;
   margin-right: 0.25rem;
+}
+.kickCon {
+  margin: 100px auto 0;
+}
+.kickTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kickTitle span {
+  font-family: "SBAggroM";
+  font-size: 32px;
+}
+.kickList {
+  margin: auto;
+  font-size: 20px;
+  margin-top: 30px;
+  /* border: 1px solid red; */
+  max-width: 100%;
+  line-height: 1.5;
+}
+.kickList li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #b4b4b4;
+  padding: 20px 0;
+  position: relative;
+}
+.kickList li:first-of-type {
+  padding-top: 0;
+}
+.kickList li span {
+  width: 50%;
+  margin-right: 2rem;
+}
+.pjModalWrap6 .kickList li span {
+  width: 70%;
+}
+.pjModalWrap1 .originalPage,
+.pjModalWrap2 .originalPage {
+  color: blue;
+}
+.kickImg {
+  width: calc(50% - 2rem);
+  /* border: 1px solid red; */
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.24));
+}
+.pjModalWrap6 .kickImg {
+  width: calc(30% - 2rem);
+}
+.kickImg img {
+  width: 100%;
+  /* border: 1px solid red; */
+}
+.kickList li span:first-of-type {
+  display: inline-block;
+  padding-left: 30px;
+  text-indent: -16px;
 }
 
 /*////////// sec5 - Contact //////////*/
@@ -1453,15 +1517,29 @@ canvas {
 }
 .SecondView.on {
   opacity: 1;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-items: center; */
   padding: 95px;
   width: 100%;
   height: 100%;
 }
+#sec5 .secTitle {
+  width: 100%;
+}
 .contactInfo {
   margin-top: 100px;
   padding: 30px;
+  width: 60%;
   /* border: 1px solid red; */
+}
+.contactSideImg {
+  width: calc(40% - 2rem);
+  /* border: 1px solid red; */
+}
+.contactSideImg img {
+  width: 80%;
 }
 .phone,
 .email,

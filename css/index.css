@@ -20,6 +20,7 @@ body {
   background-color: #2b2b2b;
   color: #f3f3f4;
   font-family: "VITRO PRIDE";
+  word-break: keep-all;
 }
 body.on {
   overflow: hidden;
@@ -1272,12 +1273,77 @@ canvas {
 }
 .pjMockupBox {
   /* border: 1px solid red; */
-  max-width: 660px;
+  max-width: 600px;
   width: 100%;
   margin: auto;
 }
+.pjModalWrap6 .pjMockupBox {
+  margin-top: -50px;
+}
 .pjMockupBox img {
   width: 100%;
+  margin-left: -30px;
+}
+.pjModalWrap6 .pjMockupBox img {
+  margin: auto;
+}
+.pjLinkCon {
+  /* border: 1px solid red; */
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pjLinkCon > a {
+  background-color: #2b2b2b;
+  color: #f3f3f4;
+  font-size: 20px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  margin: 0.5rem;
+  transition: 0.3s;
+}
+.pjLinkCon > a:hover {
+  filter: brightness(0.3);
+}
+.overViewCon {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.overViewCon > span:first-of-type {
+  font-family: "SBAggroM";
+  font-size: 32px;
+}
+.overViewCon > span:last-of-type {
+  font-size: 20px;
+  margin-top: 10px;
+  /* border: 1px solid red; */
+  max-width: 80%;
+  text-align: center;
+  line-height: 1.5;
+  /* font-weight: bold; */
+}
+.pjStackCon {
+  margin: 80px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pjStackCon > div {
+  font-family: "SBAggroM";
+  font-size: 32px;
+}
+.pjStackCon > ul {
+  font-size: 20px;
+  margin-top: 10px;
+  max-width: 80%;
+  line-height: 1.5;
+}
+.pjStackCon li i {
+  color: #ffcf23;
+  margin-right: 0.25rem;
 }
 
 /*////////// sec5 - Contact //////////*/

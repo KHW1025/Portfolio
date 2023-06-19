@@ -439,10 +439,17 @@ pj.forEach((item, i) => {
 
 pjModalCloseBtn.forEach((item, i) => {
   item.addEventListener("click", (event) => {
-    // event.preventDefault();
-    // 기본 동작 막기
     body.classList.remove("on");
     pjModal[i].classList.remove("on");
+  });
+});
+
+window.addEventListener("click", (e) => {
+  pjModal.forEach((item, i) => {
+    if (e.target == item) {
+      item.classList.remove("on");
+      body.classList.remove("on");
+    }
   });
 });
 

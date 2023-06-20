@@ -510,9 +510,9 @@ canvas {
   display: flex;
 }
 .aboutModal {
-  max-width: 930px;
+  max-width: 1130px;
   background-color: #e0e0e0;
-  max-height: 660px;
+  max-height: 80%;
   border-radius: 16px;
   padding: 30px;
   width: 100%;
@@ -550,7 +550,7 @@ canvas {
 }
 .aboutModalInfo {
   width: 100%;
-  height: calc(100% - 100px);
+  height: calc(100% - 80px);
   background-color: #ffffff;
   border-radius: 12px;
   overflow-y: scroll;
@@ -558,11 +558,12 @@ canvas {
   padding: 50px;
 }
 .commentCon {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
 .commentCon > p {
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 16px;
   font-weight: bold;
 }
@@ -570,7 +571,7 @@ canvas {
   margin-top: 30px;
 }
 .educationCon .title {
-  font-size: 40px;
+  font-size: 44px;
   color: #ffcf23;
   font-weight: bold;
   /* border: 1px solid red; */
@@ -1261,9 +1262,9 @@ canvas {
   display: flex;
 }
 .pjModal {
-  max-width: 930px;
+  max-width: 1400px;
   background-color: #e0e0e0;
-  max-height: 660px;
+  max-height: 85%;
   border-radius: 16px;
   padding: 30px;
   width: 100%;
@@ -1300,7 +1301,7 @@ canvas {
 }
 .pjModalInfo {
   width: 100%;
-  height: calc(100% - 100px);
+  height: calc(100% - 80px);
   background-color: #ffffff;
   /* background-color: #2b2b2b; */
   border-radius: 12px;
@@ -1310,7 +1311,7 @@ canvas {
 }
 .pjMockupBox {
   /* border: 1px solid red; */
-  max-width: 600px;
+  max-width: 800px;
   width: 100%;
   margin: auto;
 }
@@ -1334,9 +1335,9 @@ canvas {
 .pjLinkCon > a {
   background-color: #2b2b2b;
   color: #f3f3f4;
-  font-size: 20px;
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
+  font-size: 24px;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
   margin: 0.5rem;
   transition: 0.3s;
 }
@@ -1344,25 +1345,25 @@ canvas {
   filter: brightness(0.3);
 }
 .overViewCon {
-  margin-top: 100px;
+  margin-top: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .overViewCon > span:nth-of-type(1) {
   font-family: "SBAggroM";
-  font-size: 32px;
+  font-size: 44px;
 }
 .overViewCon > span:nth-of-type(2) {
-  font-size: 20px;
-  margin-top: 10px;
+  font-size: 30px;
+  margin-top: 20px;
   /* border: 1px solid red; */
   max-width: 80%;
   text-align: center;
   line-height: 1.5;
 }
 .overViewCon > span:nth-of-type(3) {
-  font-size: 20px;
+  font-size: 30px;
   margin-top: 10px;
   /* border: 1px solid red; */
   text-align: center;
@@ -1372,18 +1373,18 @@ canvas {
   color: #ffcf23;
 }
 .pjStackCon {
-  margin: 100px auto 0;
+  margin: 120px auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .pjStackCon > div {
   font-family: "SBAggroM";
-  font-size: 32px;
+  font-size: 44px;
 }
 .pjStackCon > ul {
-  font-size: 20px;
-  margin-top: 10px;
+  font-size: 30px;
+  margin-top: 20px;
   max-width: 80%;
   line-height: 1.5;
 }
@@ -1392,7 +1393,7 @@ canvas {
   margin-right: 0.25rem;
 }
 .kickCon {
-  margin: 100px auto 0;
+  margin: 120px auto 0;
 }
 .kickTitle {
   display: flex;
@@ -1401,11 +1402,11 @@ canvas {
 }
 .kickTitle span {
   font-family: "SBAggroM";
-  font-size: 32px;
+  font-size: 44px;
 }
 .kickList {
   margin: auto;
-  font-size: 20px;
+  font-size: 30px;
   margin-top: 30px;
   /* border: 1px solid red; */
   max-width: 100%;
@@ -1419,7 +1420,7 @@ canvas {
   position: relative;
 }
 .kickList li:first-of-type {
-  padding-top: 0;
+  padding-top: 10px;
 }
 .kickList li span {
   width: 50%;
@@ -1497,18 +1498,19 @@ canvas {
   color: #f3f3f4;
   overflow: hidden;
   border-right: 1px solid #f3f3f4;
-  animation: typing 4s steps(20) infinite;
+  animation: typing 5s steps(30) infinite;
 }
 @keyframes typing {
   0% {
     width: 0%;
   }
-  50% {
-    width: 50%;
-  }
+  45%,
   100% {
-    width: 108%;
+    width: 105%;
   }
+  /* 100% {
+    width: 108%;
+  } */
 }
 .contactImg {
   margin-top: 120px;

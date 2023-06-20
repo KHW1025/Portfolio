@@ -1344,6 +1344,15 @@ canvas {
 .pjLinkCon > a:hover {
   filter: brightness(0.3);
 }
+.pjModalWrap4 .errorMessage {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+  margin-top: 16px;
+  font-size: 20px;
+  color: rgb(241, 13, 13);
+}
 .overViewCon {
   margin-top: 120px;
   display: flex;
@@ -1614,4 +1623,60 @@ canvas {
   position: absolute;
   bottom: 30px;
   left: 30px;
+}
+
+@media (max-width: 1580px) {
+  .sec1TextCon {
+    margin-right: 30rem;
+  }
+  .sec1TextCon span {
+    font-size: 70px;
+  }
+  .smoke {
+    width: 200px;
+    height: 900px;
+  }
+  .ladle {
+    width: 400px;
+  }
+  .ladle img {
+    width: 100%;
+  }
+}
+@media (max-width: 1350px) {
+  .sec1TextCon {
+    margin-right: 20rem;
+  }
+  .sec1TextCon span {
+    font-size: 50px;
+  }
+  .smoke {
+    width: 200px;
+    height: 900px;
+    right: 20%;
+  }
+  canvas {
+    width: 80%;
+    margin-bottom: 250px;
+  }
+  .stackImg img {
+    width: 60%;
+  }
+  .ladle {
+    width: 170%;
+  }
+  .reactIconImg {
+    left: 13%;
+    bottom: 45%;
+  }
+  .cssIconImg {
+    left: 25%;
+    bottom: 33%;
+  }
+  .jsIconImg {
+    right: 0%;
+    bottom: 38%;
+  }
+}
+@media (max-width: 1080px) {
 }

@@ -79,26 +79,30 @@ pgLinks.forEach((link) => {
 
 // pagenation을 클릭하는게 아니라 스크롤로 내렸을때
 // 해당 section에 맞는 page nation에 on 클래스가 붙게하는 기능
-window.addEventListener("scroll", () => {
-  const scrollTop = window.scrollY;
-  // console.log(scrollTop);
-  sections.forEach((section, i) => {
-    if (scrollTop >= section.offsetTop - 50) {
-      // -50을 하는 이유는 아래까지 다떨어지지 않아도 좀더 빠르게 변경되게
-      pgLinks.forEach((a) => {
-        a.classList.remove("on");
-      });
-      pgLinks[i].classList.add("on");
+if (window.innerWidth > 600) {
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    // console.log(scrollTop);
+    sections.forEach((section, i) => {
+      if (scrollTop >= section.offsetTop - 50) {
+        // -50을 하는 이유는 아래까지 다떨어지지 않아도 좀더 빠르게 변경되게
+        pgLinks.forEach((a) => {
+          a.classList.remove("on");
+        });
+        pgLinks[i].classList.add("on");
 
-      // sec3Pg에 "on" 클래스가 있는지 확인합니다.
-      if (sec3Pg.classList.contains("on")) {
-        sec3Section.classList.add("view");
-      } else {
-        sec3Section.classList.remove("view");
+        // sec3Pg에 "on" 클래스가 있는지 확인합니다.
+        if (sec3Pg.classList.contains("on")) {
+          sec3Section.classList.add("view");
+        } else {
+          sec3Section.classList.remove("view");
+        }
       }
-    }
+    });
   });
-});
+} else {
+  sec3Section.classList.add("view");
+}
 
 //////////// sec1 - 연기 모션 ////////////
 const canvas = document.querySelector("#experiment");

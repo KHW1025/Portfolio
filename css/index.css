@@ -1096,7 +1096,7 @@ canvas {
   width: 100%;
   cursor: pointer;
   transition: 0.3s;
-  filter: brightness(0.3);
+  filter: brightness(0.2);
 }
 #sec3 .stack img:hover {
   filter: brightness(1);

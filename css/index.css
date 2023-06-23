@@ -135,18 +135,18 @@ canvas {
 }
 
 .reactIconImg {
-  left: 10%;
-  bottom: 42%;
+  left: 20%;
+  bottom: 43%;
   animation: stackmove1 2s infinite linear;
 }
 .cssIconImg {
-  left: 25%;
-  bottom: 28%;
+  left: 27%;
+  bottom: 30%;
   animation: stackmove2 2s infinite linear;
 }
 .jsIconImg {
-  right: 0%;
-  bottom: 35%;
+  right: -10%;
+  bottom: 37%;
   animation: stackmove3 2.5s infinite linear;
 }
 
@@ -156,7 +156,7 @@ canvas {
     transform: translate(-50%, -50%);
   }
   50% {
-    transform: translate(-50%, -60%);
+    transform: translate(-50%, -70%);
   }
 }
 @keyframes stackmove2 {
@@ -165,7 +165,7 @@ canvas {
     transform: translate(-50%, -40%);
   }
   50% {
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -55%);
   }
 }
 @keyframes stackmove3 {
@@ -174,7 +174,7 @@ canvas {
     transform: translate(-50%, -25%);
   }
   50% {
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -1710,21 +1710,21 @@ canvas {
     margin-bottom: 250px;
   }
   .stackImg img {
-    width: 60%;
+    width: 70%;
   }
   .ladle {
     width: 170%;
   }
   .reactIconImg {
-    left: 13%;
+    left: 20%;
     bottom: 45%;
   }
   .cssIconImg {
-    left: 25%;
+    left: 30%;
     bottom: 33%;
   }
   .jsIconImg {
-    right: 0%;
+    right: -5%;
     bottom: 38%;
   }
   #sec2 .textCon {
@@ -1919,7 +1919,7 @@ canvas {
     margin-right: 20px;
   }
   .stackImg img {
-    width: 40%;
+    width: 45%;
   }
   .reactIconImg {
     left: 30%;

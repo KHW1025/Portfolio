@@ -12,26 +12,11 @@ window.addEventListener("resize", () => {
   }, 1000);
 });
 
-// 툭툭 떨어지게 만드는 모션 (600이상에서(pc화면))
-// if (window.innerWidth > 600) {
-//   sections.forEach((section) => {
-//     section.addEventListener("mousewheel", (e) => {
-//       const delta = e.wheelDelta ? e.wheelDelta : -e.detail;
-//       const nextSection =
-//         delta < 0 ? section.nextElementSibling : section.previousElementSibling;
-
-//       // .aboutModalWrap 요소에 on 클래스가 없을 때만 실행
-//       if (!aboutModal.classList.contains("on") && nextSection) {
-//         const moveTop =
-//           window.pageYOffset + nextSection.getBoundingClientRect().top;
-//         window.scrollTo({ top: moveTop, left: 0, behavior: "smooth" });
-//       }
-//     });
-//   });
-// }
+//////////// 툭툭 떨어지게 만드는 모션 (600이상에서(pc화면)) ////////////
 if (window.innerWidth > 600) {
   sections.forEach((section) => {
     section.addEventListener("mousewheel", (e) => {
+      e.preventDefault();
       const delta = e.wheelDelta ? e.wheelDelta : -e.detail;
       const nextSection =
         delta < 0 ? section.nextElementSibling : section.previousElementSibling;
@@ -49,13 +34,6 @@ if (window.innerWidth > 600) {
     });
   });
 }
-
-// 클릭하면 이동하게
-// gotop.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   // 클릭했을때 해쉬태그 출력 X
-//   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-// });
 
 pgLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
@@ -80,7 +58,9 @@ pgLinks.forEach((link) => {
 // pagenation을 클릭하는게 아니라 스크롤로 내렸을때
 // 해당 section에 맞는 page nation에 on 클래스가 붙게하는 기능
 if (window.innerWidth > 600) {
-  window.addEventListener("scroll", () => {
+  window.addEventListener("scroll", (e) => {
+    e.preventDefault();
+
     const scrollTop = window.scrollY;
     // console.log(scrollTop);
     sections.forEach((section, i) => {

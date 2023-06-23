@@ -1148,6 +1148,7 @@ canvas {
 /*////////// sec4 - Project //////////*/
 #sec4 {
   position: relative;
+  overflow-x: hidden;
 }
 .pjList {
   margin-top: 65px;
@@ -1228,7 +1229,20 @@ canvas {
   position: absolute;
   bottom: 40px;
   width: 100%;
-  right: 0;
+  right: -100%;
+}
+#sec4 .imgCon.on {
+  /* right: 0; */
+  animation: sec4Img 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes sec4Img {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
 }
 .bowlImg {
   /* width: 450px; */
@@ -1516,13 +1530,13 @@ canvas {
   color: #f3f3f4;
   overflow: hidden;
   border-right: 1px solid #f3f3f4;
-  animation: typing 5s steps(30) infinite;
+  animation: typing 4s steps(30) infinite;
 }
 @keyframes typing {
   0% {
     width: 0%;
   }
-  45%,
+  65%,
   100% {
     width: 105%;
   }

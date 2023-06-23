@@ -3,6 +3,33 @@ const sections = document.querySelectorAll(".section");
 const pgLinks = document.querySelectorAll(".pg > a");
 const sec3Section = document.querySelector("#sec3");
 const sec3Pg = document.querySelector(".sec3Pg");
+const sec4Img = document.querySelector("#sec4 > .imgCon");
+const sec4Pg = document.querySelector(".sec4Pg");
+
+pgLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const section = document.querySelector(link.getAttribute("href"));
+    const moveTop = section.offsetTop;
+    window.scrollTo({ top: moveTop, left: 0, behavior: "smooth" });
+    // pgLinks.forEach((a) => {
+    //   a.classList.remove("on");
+    // });
+    // link.classList.add("on");
+
+    // sec3Pg와 sec4Pg에 "on" 클래스가 있는지 확인합니다.
+    if (sec3Pg.classList.contains("on")) {
+      sec3Section.classList.add("view");
+    } else {
+      sec3Section.classList.remove("view");
+    }
+    if (sec4Pg.classList.contains("on")) {
+      sec4Img.classList.add("on");
+    } else {
+      sec4Img.classList.remove("on");
+    }
+  });
+});
 
 if (window.innerWidth > 600) {
   window.addEventListener("resize", () => {
@@ -37,26 +64,6 @@ if (window.innerWidth > 600) {
   });
 }
 
-pgLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    const section = document.querySelector(link.getAttribute("href"));
-    const moveTop = section.offsetTop;
-    window.scrollTo({ top: moveTop, left: 0, behavior: "smooth" });
-    pgLinks.forEach((a) => {
-      a.classList.remove("on");
-    });
-    link.classList.add("on");
-
-    // sec3Pg에 "on" 클래스가 있는지 확인합니다.
-    if (sec3Pg.classList.contains("on")) {
-      sec3Section.classList.add("view");
-    } else {
-      sec3Section.classList.remove("view");
-    }
-  });
-});
-
 // pagenation을 클릭하는게 아니라 스크롤로 내렸을때
 // 해당 section에 맞는 page nation에 on 클래스가 붙게하는 기능
 if (window.innerWidth > 600) {
@@ -73,11 +80,16 @@ if (window.innerWidth > 600) {
         });
         pgLinks[i].classList.add("on");
 
-        // sec3Pg에 "on" 클래스가 있는지 확인합니다.
+        // sec3Pg와 sec4Pg에 "on" 클래스가 있는지 확인합니다.
         if (sec3Pg.classList.contains("on")) {
           sec3Section.classList.add("view");
         } else {
           sec3Section.classList.remove("view");
+        }
+        if (sec4Pg.classList.contains("on")) {
+          sec4Img.classList.add("on");
+        } else {
+          sec4Img.classList.remove("on");
         }
       }
     });
@@ -422,6 +434,8 @@ stackImg.forEach((item, i) => {
     stackDetail[i].classList.add("on");
   });
 });
+
+//////////// sec4 하단이미지 모션 ////////////
 
 //////////// sec5 yes 버튼 ////////////
 const pj = document.querySelectorAll(".pj");

@@ -4,13 +4,15 @@ const pgLinks = document.querySelectorAll(".pg > a");
 const sec3Section = document.querySelector("#sec3");
 const sec3Pg = document.querySelector(".sec3Pg");
 
-window.addEventListener("resize", () => {
-  console.log("리사이즈");
-  setTimeout(() => {
-    location.reload();
-    console.log("1초 지남");
-  }, 1000);
-});
+if (window.innerWidth > 600) {
+  window.addEventListener("resize", () => {
+    console.log("리사이즈");
+    setTimeout(() => {
+      location.reload();
+      console.log("1초 지남");
+    }, 1000);
+  });
+}
 
 //////////// 툭툭 떨어지게 만드는 모션 (600이상에서(pc화면)) ////////////
 if (window.innerWidth > 600) {

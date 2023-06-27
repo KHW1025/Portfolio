@@ -1132,6 +1132,7 @@ canvas {
   transition: 0.3s;
   /* border: 1px solid red; */
   background-color: #f3f3f4;
+  /* background-color: #ffffff; */
   padding: 30px;
   width: 100%;
 }
@@ -1788,9 +1789,9 @@ canvas {
   #sec2 .textCon {
     width: 100%;
   }
-  .secTitle {
+  /* .secTitle {
     align-items: center;
-  }
+  } */
   .secTitle .titleBar {
     height: 40px;
   }
@@ -2063,9 +2064,28 @@ canvas {
   .sec1TextCon span {
     font-size: 32px;
   }
+  .scrollImg img {
+    width: 70%;
+  }
+  .secTitle .titleBar {
+    margin-right: 16px;
+  }
+  .secTitle span:first-of-type {
+    padding-top: 3px;
+    font-size: 30px;
+  }
+  #sec2 .consoleText {
+    font-size: 16px;
+  }
+  #sec2 .consoleText::after {
+    font-size: 12px;
+  }
   #sec2 .textCon {
     font-size: 20px;
   }
+  /* #sec2 .codeTyping {
+    left: 120%;
+  } */
   .aboutModal {
     padding: 20px;
     height: 60vh;
@@ -2122,6 +2142,9 @@ canvas {
     animation: none;
     opacity: 1;
     display: block;
+  }
+  #sec3 .secTitle span:last-child {
+    font-size: 16px;
   }
   .stacksCon {
     width: 100%;
@@ -2265,7 +2288,6 @@ canvas {
   #sec2 .codeTyping > div {
     margin-bottom: 8px;
   }
-
   #sec2 .codeLine1 span:nth-of-type(1) {
     width: 5px;
     margin-right: 4px;
